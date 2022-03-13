@@ -37,6 +37,7 @@
 async function doMath() {
     try {
         let result = await slowMath.add(2, 6);
+        // throw Error('test')
         console.log(result);
         result = await slowMath.multiply(result, 2);
         console.log(result);
@@ -56,7 +57,7 @@ async function doMath() {
         console.log(`The final result is: ${result}`);
     } catch (e) {
         let x = new Error('nooope');
-        console.log(x)
+        console.error(x)
         console.log(e);
     }
 }
